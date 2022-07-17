@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(131, 131, 122);
+}
+#title {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 50px;
+}
+.tweet {
+  display: inline;
+}
+#ha {
+  padding: 20px;
+}
+#TwitInput {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+#addTwit {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 15%;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#comments {
+  width: 100%;
+  height: max-content;
+  border: 4px solid blue;
+  padding: 20px;
+  box-sizing: border-box;
+  border-style: solid;
+}

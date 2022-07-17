@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>TWEETER</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Balthazar"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+
+  </head>
+  <body>
+   
+   <script id="first-template" type="text/x-handlebars-template">
+      {{#each posts}}
+      <div id="comments" >
+        <p class ="com">{{text}}</p>
+        {{#each comments}}
+        <ul>
+       <button>Delete comment  </button><li>{{text}}
+         </li> 
+        </ul>
+        {{/each}}
+        <div id="addComment">
+          <input id="commentInput" type="text" />
+          <button  id = "addCommentButton" >Add comment</button>
+        </div>
+        <button >delete comment</button>
+      </div>
+      {{/each}}
+
+    </script>
+
+    <h1 id="title">Tweeter</h1>
+    <div class="tweet">
+      <input id="TwitInput" type="text" />
+      <button id="addTwit" onclick="savePost()">Twit</button>
+    </div>
+    <div id="container">
+    </div>
+
+  </body>
+</html>
+
+<script src="tweeterModule.js"></script>
+<script src="rander.js"></script>
+
+<script src="main.js"></script>

@@ -21,7 +21,7 @@
         <p class ="com">{{text}}</p>
         {{#each comments}}
         <ul>
-       <button>Delete comment  </button><li>{{text}}
+       <button id = {{id}} onClick="delete_click(this.id)"> Delete comment  </button><li>{{text}}
          </li> 
         </ul>
         {{/each}}

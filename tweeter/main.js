@@ -26,3 +26,18 @@ $("body").on("click", "#addCommentButton", function () {
     }
   }
 });
+function delete_click(clicked_id) {
+  //alert(clicked_id);
+  but = document.getElementById(clicked_id);
+  let postdiv = $(but).closest("#comments");
+  let postText = postdiv.find("p").text();
+  const posts = tweeter.getPosts();
+
+  for (let post of posts) {
+    if (post.text == postText) {
+      console.log(post.id);
+      tweeter.removeComment(post.id, clicked_id);
+      rand.renderPost(tweeter.getPosts());
+    }
+  }
+}
